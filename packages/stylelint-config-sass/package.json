@@ -1,7 +1,7 @@
 {
   "name": "@yoo-digital/stylelint-config-sass",
   "description": "Stylelint configuration file containing rules for Sass projects",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
