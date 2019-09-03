@@ -1,0 +1,83 @@
+{
+  "name": "@yoo-digital/stylelint-config-sass",
+  "description": "Stylelint configuration file containing rules for Sass projects",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "Sass",
+    "stylelint",
+    "stylelint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/yooapps/yoo-digital-css.git",
+    "directory": "packages/stylelint-config-sass"
+  },
+  "author": {
+    "name": "YOO AG",
+    "email": "info@yoo.digital",
+    "url": "https://www.yoo.digital/"
+  },
+  "contributors": [
+    {
+      "name": "Björn Bühler",
+      "email": "bjoern.buehler@yoo.digital"
+    },
+    {
+      "name": "Cédric Madörin",
+      "email": "cedric.madoerin@yoo.digital"
+    },
+    {
+      "name": "Christoph Dörfel",
+      "email": "christoph.doerfel@yoo.digital"
+    },
+    {
+      "name": "Emanuel Marsicovetere",
+      "email": "emanuel.marsicovetere@yooapps.com"
+    },
+    {
+      "name": "Kelvin Louis",
+      "email": "kelvin.louis@yoo.digital"
+    },
+    {
+      "name": "Robin Hahne",
+      "email": "robin.hahne@yooapps.com"
+    },
+    {
+      "name": "Sacha Schmid",
+      "email": "sacha.schmid@yoo.digital"
+    },
+    {
+      "name": "Yanick Recher",
+      "email": "yanick.recher@yooapps.com"
+    }
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "stylelint \"{src,styles,stories}/**/*.scss\""
+  },
+  "engines": {
+    "node": ">= 12.4.0",
+    "yarn": ">= 1.15.0"
+  },
+  "dependencies": {
+    "stylelint-config-property-sort-order-smacss": "^5.0.0",
+    "stylelint-config-standard": "^18.3.0"
+  },
+  "devDependencies": {
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.10.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.10.0"
+  }
+}
