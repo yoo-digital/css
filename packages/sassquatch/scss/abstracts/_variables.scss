@@ -1,0 +1,205 @@
+// ==========================================
+// General Settings
+// ==========================================
+
+// Paths
+// Static path: The directory your static files/assets reside:
+$static-directory-path: "../assets" !default;
+$fonts-path: "#{$static-directory-path}/fonts" !default;
+
+// ==========================================
+// Colors
+// ==========================================
+// General
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$grey-900: lighten($black, 0.1);
+$grey-800: lighten($black, 0.2);
+$grey-700: lighten($black, 0.3);
+$grey-600: lighten($black, 0.4);
+$grey-500: lighten($black, 0.5);
+$grey-400: lighten($black, 0.6);
+$grey-300: lighten($black, 0.7);
+$grey-200: lighten($black, 0.8);
+$grey-100: lighten($black, 0.9);
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// Branding colors
+$primary: $blue !default;
+$secondary: $teal !default;
+$dark: $grey-800 !default;
+$light: $grey-100 !default;
+
+// Functional colors
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+// A map containing all colors
+$color-map: (
+  // General colors
+  "black": $black,
+  "white": $white,
+  // Branding colors
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark,
+  "light": $light,
+  // Functional colors
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+) !default;
+
+// A map containing the variations of a specific theme
+$theme-colors: (
+  "primary": (
+    "base": $primary,
+  ),
+  "secondary": (
+    "base": $secondary,
+  ),
+  "dark": (
+    "base": $dark,
+  ),
+  "light": (
+    "base": $light,
+  ),
+) !default;
+
+// Applied colors
+$body-color: $dark !default;
+$headings-color: null !default;
+
+$link-color: $primary !default;
+$link-color-hover: lighten($primary, 20%) !default;
+
+// ==========================================
+// Fonts / Typography
+// ==========================================
+
+// Family
+$font-family-base: null !default;
+$font-family-headings: $font-family-base !default;
+
+// Size
+$font-size-base: 1rem !default;
+$font-size-sm: $font-size-base * 0.8 !default;
+$font-size-lg: $font-size-base * 1.125 !default;
+$font-size-xl: $font-size-base * 1.25 !default;
+
+$font-size-map: (
+  "sm": $font-size-sm,
+  "base": $font-size-base,
+  "lg": $font-size-lg,
+  "xl": $font-size-xl
+) !default;
+
+// Major Third Scale (1.25): https://type-scale.com/
+$h1-font-size: $font-size-base * 3.052 !default;
+$h2-font-size: $font-size-base * 2.441 !default;
+$h3-font-size: $font-size-base * 1.953 !default;
+$h4-font-size: $font-size-base * 1.563 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+
+// Weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$h1-font-weight: $font-weight-bold !default;
+$h2-font-weight: $font-weight-bold !default;
+$h3-font-weight: $font-weight-bold !default;
+$h4-font-weight: $font-weight-semi-bold !default;
+$h5-font-weight: $font-weight-semi-bold !default;
+
+// Line Height
+$line-height-base: 1.5 !default;
+
+$h1-line-height: $line-height-base !default;
+$h2-line-height: $line-height-base !default;
+$h3-line-height: $line-height-base !default;
+$h4-line-height: $line-height-base!default;
+$h5-line-height: $line-height-base !default;
+
+// Decoration
+$link-decoration: null !default;
+$link-decoration-hover: null !default;
+
+// ==========================================
+// Spacing
+// ==========================================
+// General spacing
+$spacing: 10px !default;
+
+// Typography spacing
+$headings-margin-top: 0 !default;
+$headings-margin-bottom: $spacing * 1.5 !default;
+
+$paragraph-margin-top: 0 !default;
+$paragraph-margin-bottom: $spacing * 0.5 !default;
+
+$h1-margin-top: $headings-margin-top !default;
+$h2-margin-top: $headings-margin-top !default;
+$h3-margin-top: $headings-margin-top !default;
+$h4-margin-top: $headings-margin-top !default;
+$h5-margin-top: $headings-margin-top !default;
+
+$h1-margin-bottom: $headings-margin-bottom !default;
+$h2-margin-bottom: $headings-margin-bottom !default;
+$h3-margin-bottom: $headings-margin-bottom !default;
+$h4-margin-bottom: $headings-margin-bottom !default;
+$h5-margin-bottom: $headings-margin-bottom !default;
+
+// ==========================================
+// Layout Settings
+// ==========================================
+
+// Breakpoints
+// Inspired by: https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+$breakpoint-xs-min: 0px !default;
+$breakpoint-xs-max: 599px !default;
+$breakpoint-sm-min: 600px !default;
+$breakpoint-sm-max: 1023px !default;
+$breakpoint-md-min: 1024px !default;
+$breakpoint-md-max: 1279px !default;
+$breakpoint-lg-min: 1280px !default;
+$breakpoint-lg-max: 1439px !default;
+$breakpoint-xl-min: 1440px !default;
+$breakpoint-xl-max: 1919px !default;
+$breakpoint-xxl-min: 1920px !default;
+
+$breakpoints: (
+  xs: $breakpoint-xs-min,
+  sm: $breakpoint-sm-min,
+  md: $breakpoint-md-min,
+  lg: $breakpoint-lg-min,
+  xl: $breakpoint-xl-min,
+  xxl: $breakpoint-xxl-min
+) !default;
+
+// Borders
+$border-radius-round: 999px !default;
+
+// Box Shadow
+
+// Z-Index
+$z-index-sticky: 1000 !default;

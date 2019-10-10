@@ -1,0 +1,79 @@
+@import "variables";
+
+// A mixin that allows you to set "box-sizing: border-box" as a global default.
+// It is provided as a mixin so you can decide if it should be set or not.
+// Not every library or framework is compatible with this setting.
+@mixin global-border-box() {
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}
+
+// Helper that defines border-box as the box-sizing strategy
+// for the element and its pseudo-elements.
+// Useful if it has to be explicitly set on elements or components.
+@mixin border-box() {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+// Positions the element fixed and adjusts the top offset
+@mixin sticky($top: 0, $z-index: $z-index-sticky) {
+  position: sticky;
+  z-index: $z-index;
+  top: $top;
+  left: 0;
+}
+
+// Applies a modifier for every font-size unit available in the provided map.
+@mixin font-size-modifier($map: $font-size-map) {
+  @each $key, $value in $map {
+    &--#{$key} {
+      font-size: map-get($map, $key);
+    }
+  }
+}
+
+// This mixin allows to clip text which the element contains,
+// by providing the number of lines and the line height.
+// This will work for Edge, Firefox (latest) and Chrome.
+// It won't clip in IE 11.
+// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix
+@mixin max-lines($number-of-lines, $line-height: $line-height-base) {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: $line-height;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number-of-lines;
+  -webkit-box-orient: vertical;
+}
+// stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix
+
+// Helper function to define and use breakpoints
+// stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after
+@mixin breakpoint($breakpoint, $key: min, $orientation: false) {
+  @if ($orientation) {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) and (orientation: $orientation) {
+      @content;
+    }
+  } @else {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+// stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after

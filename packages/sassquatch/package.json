@@ -1,0 +1,82 @@
+{
+  "name": "@yoo-digital/sassquatch",
+  "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/yooapps/yoo-digital-css.git",
+    "directory": "packages/sassquatch"
+  },
+  "author": {
+    "name": "YOO AG",
+    "email": "info@yoo.digital",
+    "url": "https://www.yoo.digital/"
+  },
+  "contributors": [
+    {
+      "name": "Björn Bühler",
+      "email": "bjoern.buehler@yoo.digital"
+    },
+    {
+      "name": "Cédric Madörin",
+      "email": "cedric.madoerin@yoo.digital"
+    },
+    {
+      "name": "Christoph Dörfel",
+      "email": "christoph.doerfel@yoo.digital"
+    },
+    {
+      "name": "Emanuel Marsicovetere",
+      "email": "emanuel.marsicovetere@yooapps.com"
+    },
+    {
+      "name": "Kelvin Louis",
+      "email": "kelvin.louis@yoo.digital"
+    },
+    {
+      "name": "Robin Hahne",
+      "email": "robin.hahne@yooapps.com"
+    },
+    {
+      "name": "Sacha Schmid",
+      "email": "sacha.schmid@yoo.digital"
+    },
+    {
+      "name": "Yanick Recher",
+      "email": "yanick.recher@yooapps.com"
+    }
+  ],
+  "files": [
+    "assets/**/*",
+    "scss/**/*",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "stylelint \"{scss}/**/*.scss\""
+  },
+  "engines": {
+    "node": ">= 12.4.0",
+    "yarn": ">= 1.15.0"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@yoo-digital/stylelint-config-sass": "^0.0.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.23.0"
+  }
+}

@@ -1,0 +1,47 @@
+@import "./variables";
+
+/// Picks the correct color code of a specific theme
+/// @access public
+/// @param {String} $key - theme name (by default primary)
+/// @param {String} $key - color variant of the theme (by default base)
+/// @return {String}
+/// @require $theme-colors
+@function theme-color($key: "primary", $variant: "base") {
+  $map: map-get($theme-colors, $key);
+
+  @return map-get($map, $variant);
+}
+
+/// Ensures consistent spacing by always using the same base.
+/// @access public
+/// @param {String} $multiplier - multiplies using the spacing
+/// @return {Number}
+/// @require $spacing-component
+@function spacing($multiplier, $base: $spacing) {
+  @return $base * $multiplier;
+}
+
+/// Get a color value from a name
+/// @access public
+/// @param {String} $color - color’s name
+/// @return {Number}
+/// @require $colors-map
+@function color($color) {
+  @return map-get($color-map, $color);
+}
+
+/// Slightly lighten a color
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
