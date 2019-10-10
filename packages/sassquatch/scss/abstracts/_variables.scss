@@ -152,25 +152,18 @@ $h5-margin-bottom: $headings-margin-bottom !default;
 
 // Breakpoints
 // Inspired by: https://material.io/design/layout/responsive-layout-grid.html#breakpoints
-$breakpoint-xs-min: 0px !default;
-$breakpoint-xs-max: 599px !default;
-$breakpoint-sm-min: 600px !default;
-$breakpoint-sm-max: 1023px !default;
-$breakpoint-md-min: 1024px !default;
-$breakpoint-md-max: 1279px !default;
-$breakpoint-lg-min: 1280px !default;
-$breakpoint-lg-max: 1439px !default;
-$breakpoint-xl-min: 1440px !default;
-$breakpoint-xl-max: 1919px !default;
-$breakpoint-xxl-min: 1920px !default;
+$breakpoint-sm: 600px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-lg: 1280px !default;
+$breakpoint-xl: 1440px !default;
+$breakpoint-xxl: 1920px !default;
 
 $breakpoints: (
-  xs: $breakpoint-xs-min,
-  sm: $breakpoint-sm-min,
-  md: $breakpoint-md-min,
-  lg: $breakpoint-lg-min,
-  xl: $breakpoint-xl-min,
-  xxl: $breakpoint-xxl-min
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl
 ) !default;
 
 // Borders
