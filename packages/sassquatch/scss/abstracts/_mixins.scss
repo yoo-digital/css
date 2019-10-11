@@ -61,17 +61,30 @@
 }
 // stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix
 
-// Helper function to define and use breakpoints
-// stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after
-@mixin breakpoint($breakpoint, $key: min, $orientation: false) {
-  @if ($orientation) {
-    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) and (orientation: $orientation) {
-      @content;
-    }
+// The breakpoint function is a private utility function that is not intended
+// for external usage. It takes a breakpoint name, checks if it is defined,
+// and returns either the breakpoint value or a warning.
+@function _breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
   } @else {
-    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
+    @warn "No breakpoint called "#{$breakpoint}" was found. Possible values include: #{map-keys($breakpoints)}";
   }
 }
-// stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after
+
+// The at-least mixin acts as a min-width media query for the given breakpoint.
+@mixin at-least($breakpoint) {
+  @media (min-width: _breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+// The up-to mixin acts as a max-width media query for the given breakpoint.
+// 1px is subtracted from the breakpoint in order to ensure that the styles
+// are not applied, starting from the breakpoint. The media query uses calc
+// to allow breakpoint values other than pixel values, e.g. em.
+@mixin up-to($breakpoint) {
+  @media (max-width: calc(#{_breakpoint($breakpoint)} - 1px)) {
+    @content;
+  }
+}
