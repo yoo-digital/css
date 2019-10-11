@@ -71,13 +71,18 @@
     @return map-get($breakpoints, $breakpoint);
   } @else {
     @warn "No breakpoint called "#{$breakpoint}" was found. Possible values include: #{map-keys($breakpoints)}";
+    @return null;
   }
 }
 
 // The at-least mixin acts as a min-width media query for the given breakpoint.
 @mixin at-least($breakpoint) {
-  @media (min-width: _breakpoint($breakpoint)) {
-    @content;
+  $width: _breakpoint($breakpoint);
+
+  @if $width {
+    @media (min-width: $width) {
+      @content;
+    }
   }
 }
 
@@ -86,7 +91,11 @@
 // are not applied, starting from the breakpoint. The media query uses calc
 // to allow breakpoint values other than pixel values, e.g. em.
 @mixin up-to($breakpoint) {
-  @media (max-width: calc(#{_breakpoint($breakpoint)} - 1px)) {
-    @content;
+  $width: #{_breakpoint($breakpoint)};
+
+  @if $width {
+    @media (max-width: calc(#{_breakpoint($breakpoint)} - 1px)) {
+      @content;
+    }
   }
 }
