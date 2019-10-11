@@ -5,16 +5,12 @@
 // Not every library or framework is compatible with this setting.
 @mixin global-border-box() {
   html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 
   *,
   *::before,
   *::after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
     box-sizing: inherit;
   }
 }
@@ -32,6 +28,8 @@
 }
 
 // Positions the element fixed and adjusts the top offset
+// This mixin will not work for IE 11, as it does not support "position: sticky":
+// https://caniuse.com/#search=sticky
 @mixin sticky($top: 0, $z-index: $z-index-sticky) {
   position: sticky;
   z-index: $z-index;

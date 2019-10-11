@@ -124,8 +124,8 @@ $link-decoration-hover: null !default;
 // ==========================================
 // Spacing
 // ==========================================
-// General spacing
-$spacing: 10px !default;
+// General spacing relative to line-height
+$spacing: ($line-height-base * 1rem) !default;
 
 // Typography spacing
 $headings-margin-top: 0 !default;
