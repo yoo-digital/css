@@ -84,7 +84,7 @@ $font-size-map: (
   "sm": $font-size-sm,
   "base": $font-size-base,
   "lg": $font-size-lg,
-  "xl": $font-size-xl
+  "xl": $font-size-xl,
 ) !default;
 
 // Major Third Scale (1.25): https://type-scale.com/
@@ -163,7 +163,7 @@ $breakpoints: (
   md: $breakpoint-md,
   lg: $breakpoint-lg,
   xl: $breakpoint-xl,
-  xxl: $breakpoint-xxl
+  xxl: $breakpoint-xxl,
 ) !default;
 
 // Borders
@@ -171,5 +171,9 @@ $border-radius-round: 999px !default;
 
 // Box Shadow
 
-// Z-Index
 $z-index-sticky: 1000 !default;
+
+// Z-Index
+$z-indexes: (
+  sticky: $z-index-sticky,
+) !default;
