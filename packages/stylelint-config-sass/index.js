@@ -46,6 +46,8 @@ module.exports = {
     'font-weight-notation': 'numeric',
     'font-family-name-quotes': 'always-where-recommended',
     'max-nesting-depth': 3,
+    // Configuration options:
+    // https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
     'order/order': [
       [
         {
@@ -60,7 +62,7 @@ module.exports = {
         {
           type: 'at-rule',
           name: 'include',
-          parameter: 'breakpoint',
+          parameter: 'up-to|at-least',
         },
       ],
       {
