@@ -1,17 +1,21 @@
 {
-  "name": "@yoo-digital/css",
-  "description": "Mono repository containing reusable configuration/setup files for CSS projects within YOO",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@yoo-digital/sassquatch",
+  "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
+  "version": "0.0.1",
   "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
-    "CSS",
-    "Sass",
-    "Mono Repository"
+    "sass",
+    "scss",
+    "css",
+    "library"
   ],
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/yooapps/yoo-digital-css.git"
+    "url": "https://bitbucket.org/yooapps/yoo-digital-css.git",
+    "directory": "packages/sassquatch"
   },
   "author": {
     "name": "YOO AG",
@@ -52,12 +56,21 @@
       "email": "yanick.recher@yoo.digital"
     }
   ],
+  "files": [
+    "assets/**/*",
+    "scss/**/*",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "stylelint \"{scss}/**/*.scss\""
+  },
   "engines": {
     "node": ">= 12.4.0",
     "yarn": ">= 1.15.0"
   },
-  "scripts": {},
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "@yoo-digital/stylelint-config-sass": "^0.0.2",
+    "sass": "^1.23.0"
   }
 }

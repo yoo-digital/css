@@ -68,9 +68,6 @@ module.exports = {
         disableFix: true,
       },
     ],
-    'property-no-unknown': [
-      true,
-    ],
     'selector-attribute-quotes': 'always',
     'selector-max-compound-selectors': 4,
     'selector-max-id': 0,
@@ -91,6 +88,10 @@ module.exports = {
       {
         ignorePseudoClasses: [
           'global',
+
+          // For webpack support:
+          // https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript
+          'export',
         ],
       },
     ],
