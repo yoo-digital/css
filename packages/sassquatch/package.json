@@ -1,7 +1,7 @@
 {
   "name": "@yoo-digital/sassquatch",
   "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
