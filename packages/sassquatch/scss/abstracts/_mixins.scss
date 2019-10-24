@@ -86,13 +86,15 @@
 
 // The up-to mixin acts as a max-width media query for the given breakpoint.
 // 1px is subtracted from the breakpoint in order to ensure that the styles
-// are not applied, starting from the breakpoint. The media query uses calc
-// to allow breakpoint values other than pixel values, e.g. em.
+// are not applied, starting from the breakpoint.
+// The breakpoints have to be defined in px. calc(em - 1px) unfortunately does not work
+// in Edge:
+// https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15515851/
 @mixin up-to($breakpoint) {
-  $width: #{_breakpoint($breakpoint)};
+  $width: #{_breakpoint($breakpoint)} - 1px;
 
   @if $width {
-    @media (max-width: calc(#{_breakpoint($breakpoint)} - 1px)) {
+    @media (max-width: $width) {
       @content;
     }
   }
