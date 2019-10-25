@@ -87,8 +87,8 @@
 // The up-to mixin acts as a max-width media query for the given breakpoint.
 // 1px is subtracted from the breakpoint in order to ensure that the styles
 // are not applied, starting from the breakpoint.
-// The breakpoints have to be defined in px. calc(em - 1px) unfortunately does not work
-// in Edge:
+// The breakpoints have to be defined in px. calc(em - 1px) unfortunately does
+// not work in Edge:
 // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15515851/
 @mixin up-to($breakpoint) {
   $width: _breakpoint($breakpoint) - 1px;
@@ -96,6 +96,17 @@
   @if $width {
     @media (max-width: $width) {
       @content;
+    }
+  }
+}
+
+// Define max-widths for different breakpoints. The parameter is expected to be
+// a map with the format ([breakpoint]: [width]). Breakpoints must be defined in
+// the global breakpoints map.
+@mixin max-widths($widths) {
+  @each $breakpoint, $width in $widths {
+    @include at-least($breakpoint) {
+      max-width: $width;
     }
   }
 }
