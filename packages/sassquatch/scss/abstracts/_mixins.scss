@@ -91,7 +91,7 @@
 // in Edge:
 // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15515851/
 @mixin up-to($breakpoint) {
-  $width: #{_breakpoint($breakpoint)} - 1px;
+  $width: _breakpoint($breakpoint) - 1px;
 
   @if $width {
     @media (max-width: $width) {
