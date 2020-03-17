@@ -110,3 +110,26 @@
     }
   }
 }
+
+// Used for elements which should not be immediately displayed to any user.
+// These elements are hidden both visually and semantically.
+@mixin a11y-hidden {
+  display: none;
+}
+
+// Used for information required for screen-reader users to understand and use
+// the site where visual display is undesirable. Information provided in this
+// manner should be kept concise, to avoid unnecessary burden on the user.
+@mixin a11y-visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+// Hide visually and from screen-readers, but maintain layout.
+@mixin a11y-invisible {
+  visibility: hidden;
+}
