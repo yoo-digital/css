@@ -71,6 +71,6 @@
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^0.2.0",
-    "sass": "^1.23.0"
+    "sass": "^1.26.0"
   }
 }
