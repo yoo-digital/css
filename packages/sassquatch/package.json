@@ -24,6 +24,10 @@
   },
   "contributors": [
     {
+      "name": "Anders Bengtson",
+      "email": "anders.bengtson@yoo.digital"
+    },
+    {
       "name": "Björn Bühler",
       "email": "bjoern.buehler@yoo.digital"
     },
@@ -71,6 +75,6 @@
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^0.3.0",
-    "sass": "^1.26.0"
+    "sass": "^1.26.10"
   }
 }
