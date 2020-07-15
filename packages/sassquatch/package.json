@@ -1,7 +1,7 @@
 {
   "name": "@yoo-digital/sassquatch",
   "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -23,6 +23,10 @@
     "url": "https://www.yoo.digital/"
   },
   "contributors": [
+    {
+      "name": "Anders Bengtson",
+      "email": "anders.bengtson@yoo.digital"
+    },
     {
       "name": "Björn Bühler",
       "email": "bjoern.buehler@yoo.digital"
@@ -70,7 +74,7 @@
     "yarn": ">= 1.15.0"
   },
   "devDependencies": {
-    "@yoo-digital/stylelint-config-sass": "^0.2.0",
-    "sass": "^1.26.0"
+    "@yoo-digital/stylelint-config-sass": "^0.3.0",
+    "sass": "^1.26.10"
   }
 }
