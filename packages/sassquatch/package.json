@@ -63,7 +63,7 @@
   "files": [
     "assets/**/*",
     "scss/**/*",
-    "LICENSE.md",
+    "LICENSE",
     "README.md"
   ],
   "scripts": {
