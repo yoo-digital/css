@@ -2,7 +2,7 @@
   "name": "@yoo-digital/sassquatch",
   "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
   "version": "0.3.1",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
@@ -63,7 +63,7 @@
   "files": [
     "assets/**/*",
     "scss/**/*",
-    "LICENSE.md",
+    "LICENSE",
     "README.md"
   ],
   "scripts": {
@@ -71,7 +71,7 @@
   },
   "engines": {
     "node": ">= 12.4.0",
-    "yarn": ">= 1.15.0"
+    "npm": ">= 1.15.0"
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^0.3.0",
