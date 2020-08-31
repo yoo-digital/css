@@ -3,7 +3,7 @@
   "description": "Mono repository containing reusable configuration/setup files for CSS projects within YOO",
   "version": "0.1.0",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "keywords": [
     "CSS",
     "Sass",
