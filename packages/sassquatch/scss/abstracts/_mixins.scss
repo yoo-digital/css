@@ -133,3 +133,42 @@
 @mixin a11y-invisible {
   visibility: hidden;
 }
+
+// Used to customize the native scrollbars.
+// This mixin is supported by all major browsers.
+// To support the Internet Explorer properly you will have to use an additional library, such as simplebar-react.
+// macOS note: The auto-hiding semi-transparent scrollbars that are the macOS default cannot
+// be colored with this rule (it still chooses their own contrasting color based on the background).
+// Only the permanently showing scrollbars (System Preferences > Show Scroll Bars > Always) are colored.
+@mixin scrollbar(
+  $thumb-color: #1a1a1a,
+  $track-color: #cccccc,
+  $size: 8px,
+  $border-radius: 20px,
+) {
+  overflow: auto;
+
+  // Firefox
+  scrollbar-color: $thumb-color $track-color;
+  scrollbar-width: thin;
+
+  // IE
+  scrollbar-face-color: $thumb-color;
+  scrollbar-track-color: $track-color;
+
+  // Google Chrome / Safari
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $border-radius;
+    background-color: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+    background-color: $thumb-color;
+  }
+}
