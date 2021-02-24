@@ -7,7 +7,7 @@ module.exports = {
     'stylelint-scss',
   ],
   rules: {
-    'at-rule-blacklist': [
+    'at-rule-disallowed-list': [
       'extend',
     ],
     'at-rule-no-unknown': [
@@ -39,7 +39,7 @@ module.exports = {
     'comment-empty-line-before': null,
     'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
-    'declaration-property-value-blacklist': {
+    'declaration-property-value-disallowed-list': {
       '/^border/': 'none',
     },
     'function-url-quotes': 'always',

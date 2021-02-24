@@ -77,11 +77,11 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "devDependencies": {
-    "stylelint": "^13.6.1",
-    "stylelint-scss": "^3.18.0"
+    "stylelint": "^13.11.0",
+    "stylelint-scss": "^3.19.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.6.1",
-    "stylelint-scss": "^3.18.0"
+    "stylelint": "^13.11.0",
+    "stylelint-scss": "^3.19.0"
   }
 }
