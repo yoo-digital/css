@@ -24,10 +24,6 @@
   },
   "contributors": [
     {
-      "name": "Anders Bengtson",
-      "email": "anders.bengtson@yoo.digital"
-    },
-    {
       "name": "Björn Bühler",
       "email": "bjoern.buehler@yoo.digital"
     },
@@ -36,8 +32,8 @@
       "email": "cedric.madoerin@yoo.digital"
     },
     {
-      "name": "Christoph Dörfel",
-      "email": "christoph.doerfel@yoo.digital"
+      "name": "Elia Reutlinger",
+      "email": "elia.reutlinger@yoo.digital"
     },
     {
       "name": "Emanuel Marsicovetere",
@@ -75,6 +71,6 @@
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^0.3.2",
-    "sass": "^1.26.10"
+    "sass": "^1.39.0"
   }
 }
