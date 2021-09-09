@@ -26,6 +26,7 @@ module.exports = {
             'if',
             'mixin',
             'return',
+            'use',
             'warn',
           ],
       },
