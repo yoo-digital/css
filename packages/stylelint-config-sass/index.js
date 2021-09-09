@@ -26,11 +26,19 @@ module.exports = {
             'if',
             'mixin',
             'return',
+            'use',
             'warn',
           ],
       },
     ],
     'at-rule-no-vendor-prefix': true,
+
+    // See:
+    // https://github.com/stylelint/stylelint/issues/5133
+    // https://github.com/stylelint/stylelint/pull/5202#issuecomment-830668530
+    // TODO: In the future @import statements have to be replaced by @use:
+    // https://sass-lang.com/documentation/at-rules/import
+    'no-invalid-position-at-import-rule': null,
     'media-feature-name-no-vendor-prefix': true,
     'property-no-vendor-prefix': true,
     'selector-no-vendor-prefix': true,
