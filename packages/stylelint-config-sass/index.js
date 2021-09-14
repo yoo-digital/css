@@ -7,7 +7,7 @@ module.exports = {
     'stylelint-scss',
   ],
   rules: {
-    'at-rule-blacklist': [
+    'at-rule-disallowed-list': [
       'extend',
     ],
     'at-rule-no-unknown': [
@@ -26,11 +26,19 @@ module.exports = {
             'if',
             'mixin',
             'return',
+            'use',
             'warn',
           ],
       },
     ],
     'at-rule-no-vendor-prefix': true,
+
+    // See:
+    // https://github.com/stylelint/stylelint/issues/5133
+    // https://github.com/stylelint/stylelint/pull/5202#issuecomment-830668530
+    // TODO: In the future @import statements have to be replaced by @use:
+    // https://sass-lang.com/documentation/at-rules/import
+    'no-invalid-position-at-import-rule': null,
     'media-feature-name-no-vendor-prefix': true,
     'property-no-vendor-prefix': true,
     'selector-no-vendor-prefix': true,
@@ -39,13 +47,15 @@ module.exports = {
     'comment-empty-line-before': null,
     'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
-    'declaration-property-value-blacklist': {
+    'declaration-property-value-disallowed-list': {
       '/^border/': 'none',
     },
     'function-url-quotes': 'always',
     'font-weight-notation': 'numeric',
     'font-family-name-quotes': 'always-where-recommended',
     'max-nesting-depth': 3,
+    // Configuration options:
+    // https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
     'order/order': [
       [
         {
@@ -60,16 +70,13 @@ module.exports = {
         {
           type: 'at-rule',
           name: 'include',
-          parameter: 'breakpoint',
+          parameter: 'up-to|at-least',
         },
       ],
       {
         unspecified: 'ignore',
         disableFix: true,
       },
-    ],
-    'property-no-unknown': [
-      true,
     ],
     'selector-attribute-quotes': 'always',
     'selector-max-compound-selectors': 4,
@@ -91,6 +98,10 @@ module.exports = {
       {
         ignorePseudoClasses: [
           'global',
+
+          // For webpack support:
+          // https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript
+          'export',
         ],
       },
     ],

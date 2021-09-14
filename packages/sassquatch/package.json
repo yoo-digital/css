@@ -1,20 +1,21 @@
 {
-  "name": "@yoo-digital/stylelint-config-sass",
-  "description": "Stylelint configuration file containing rules for Sass projects",
-  "version": "0.4.0",
+  "name": "@yoo-digital/sassquatch",
+  "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
+  "version": "0.5.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "Sass",
-    "stylelint",
-    "stylelint-config"
+    "sass",
+    "scss",
+    "css",
+    "library"
   ],
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/yooapps/yoo-digital-css.git",
-    "directory": "packages/stylelint-config-sass"
+    "directory": "packages/sassquatch"
   },
   "author": {
     "name": "YOO AG",
@@ -55,29 +56,21 @@
       "email": "yanick.recher@yoo.digital"
     }
   ],
-  "main": "index.js",
   "files": [
-    "index.js",
+    "assets/**/*",
+    "scss/**/*",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
-    "lint": "stylelint \"{src,styles,stories}/**/*.scss\""
+    "lint": "stylelint \"{scss}/**/*.scss\""
   },
   "engines": {
     "node": ">= 12.4.0",
-    "npm": ">= 6.14.0"
-  },
-  "dependencies": {
-    "stylelint-config-property-sort-order-smacss": "^7.1.0",
-    "stylelint-config-standard": "^22.0.0"
+    "npm": ">= 1.15.0"
   },
   "devDependencies": {
-    "stylelint": "^13.13.0",
-    "stylelint-scss": "^3.20.0"
-  },
-  "peerDependencies": {
-    "stylelint": "^13.13.0",
-    "stylelint-scss": "^3.20.0"
+    "@yoo-digital/stylelint-config-sass": "^0.4.0",
+    "sass": "^1.39.0"
   }
 }
