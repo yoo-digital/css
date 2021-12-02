@@ -1,10 +1,7 @@
 module.exports = {
   extends: [
-    'stylelint-config-standard',
+    'stylelint-config-standard-scss',
     'stylelint-config-property-sort-order-smacss',
-  ],
-  plugins: [
-    'stylelint-scss',
   ],
   rules: {
     'at-rule-disallowed-list': [
