@@ -31,6 +31,10 @@
       "email": "cedric.madoerin@yoo.digital"
     },
     {
+      "name": "Daniel Kohler",
+      "email": "daniel.kohler@yoo.digital"
+    },
+    {
       "name": "Elia Reutlinger",
       "email": "elia.reutlinger@yoo.digital"
     },
@@ -49,6 +53,10 @@
     {
       "name": "Sacha Schmid",
       "email": "sacha.schmid@yoo.digital"
+    },
+    {
+      "name": "Thomas Wahl",
+      "email": "thomas.wahl@yoo.digital"
     },
     {
       "name": "Yanick Recher",
@@ -72,10 +80,7 @@
     "stylelint-config-property-sort-order-smacss": "^8.0.0",
     "stylelint-config-standard-scss": "^3.0.0"
   },
-  "devDependencies": {
-    "stylelint": "^14.1.0"
-  },
   "peerDependencies": {
-    "stylelint": "^14.1.0"
+    "stylelint": "^14.3.0"
   }
 }
