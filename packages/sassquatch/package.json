@@ -56,8 +56,8 @@
       "email": "sacha.schmid@yoo.digital"
     },
     {
-      "name": "Thomas Wahl",
-      "email": "thomas.wahl@yoo.digital"
+      "name": "Tobias Wahl",
+      "email": "tobias.wahl@yoo.digital"
     },
     {
       "name": "Yanick Recher",
@@ -79,6 +79,6 @@
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^1.0.0-alpha.1",
-    "sass": "^1.39.0"
+    "sass": "^1.49.7"
   }
 }
