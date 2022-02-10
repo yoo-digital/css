@@ -75,6 +75,18 @@ module.exports = {
         disableFix: true,
       },
     ],
+    'selector-class-pattern': [
+      '^[a-z][a-z0-9-_]+$',
+      {
+        message: 'Expected class selector to be kebab-case or follow BEM __ --',
+      },
+    ],
+    'selector-id-pattern': [
+      '^[a-z][a-z0-9-_]+$',
+      {
+        message: 'Expected id selector to be kebab-case or follow BEM __ --',
+      },
+    ],
     'selector-attribute-quotes': 'always',
     'selector-max-compound-selectors': 4,
     'selector-max-id': 0,
@@ -121,4 +133,15 @@ module.exports = {
     ],
     'scss/selector-no-redundant-nesting-selector': true,
   },
+  // Allow .camelCase for modules
+  // See: https://github.com/stylelint/stylelint/issues/3259#issuecomment-656717023
+  overrides: [
+    {
+      files: ['**/*.module.scss'],
+      rules: {
+        'selector-class-pattern': '^[a-z][a-zA-Z0-9_-]+$',
+        'selector-id-pattern': '^[a-z][a-zA-Z0-9_-]+$',
+      },
+    },
+  ],
 };
