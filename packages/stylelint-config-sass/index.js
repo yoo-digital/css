@@ -125,6 +125,7 @@ module.exports = {
     ],
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-colon-space-after': 'always-single-line',
+    'scss/dollar-variable-empty-line-before': null,
     'scss/double-slash-comment-whitespace-inside': [
       'always',
       {
@@ -132,6 +133,12 @@ module.exports = {
       },
     ],
     'scss/selector-no-redundant-nesting-selector': true,
+    'value-keyword-case': [
+      'lower',
+      {
+        'camelCaseSvgKeywords': true,
+      },
+    ],
   },
   // Allow .camelCase for modules
   // See: https://github.com/stylelint/stylelint/issues/3259#issuecomment-656717023
