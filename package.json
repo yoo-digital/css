@@ -40,6 +40,10 @@
       "email": "emanuel.marsicovetere@yoo.digital"
     },
     {
+      "name": "Hervé Brunner",
+      "email": "herve.brunner@yoo.digital"
+    },
+    {
       "name": "Kelvin Louis",
       "email": "kelvin.louis@yoo.digital"
     },
@@ -66,9 +70,13 @@
   },
   "scripts": {
     "changed": "lerna changed",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "bootstrap": "lerna bootstrap"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^6.1.0"
   }
 }

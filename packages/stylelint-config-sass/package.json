@@ -43,6 +43,10 @@
       "email": "emanuel.marsicovetere@yoo.digital"
     },
     {
+      "name": "Hervé Brunner",
+      "email": "herve.brunner@yoo.digital"
+    },
+    {
       "name": "Kelvin Louis",
       "email": "kelvin.louis@yoo.digital"
     },
@@ -78,9 +82,9 @@
   },
   "dependencies": {
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
-    "stylelint-config-standard-scss": "^3.0.0"
+    "stylelint-config-standard-scss": "^6.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^14.3.0"
+    "stylelint": "^14.16.0"
   }
 }
