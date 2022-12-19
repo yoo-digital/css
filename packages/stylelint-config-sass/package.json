@@ -77,8 +77,8 @@
     "lint": "stylelint \"{src,styles,stories}/**/*.scss\""
   },
   "engines": {
-    "node": ">= 12.4.0",
-    "npm": ">= 6.14.0"
+    "node": ">= 16",
+    "npm": ">= 6"
   },
   "dependencies": {
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
