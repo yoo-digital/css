@@ -1,7 +1,7 @@
 {
   "name": "@yoo-digital/sassquatch",
   "description": "YOO AG reusable Sass/SCSS library including definitions, mixins, functions and more.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -44,6 +44,10 @@
       "email": "emanuel.marsicovetere@yoo.digital"
     },
     {
+      "name": "Hervé Brunner",
+      "email": "herve.brunner@yoo.digital"
+    },
+    {
       "name": "Kelvin Louis",
       "email": "kelvin.louis@yoo.digital"
     },
@@ -74,11 +78,11 @@
     "lint": "stylelint \"{scss}/**/*.scss\""
   },
   "engines": {
-    "node": ">= 12.4.0",
-    "npm": ">= 1.15.0"
+    "node": ">= 16",
+    "npm": ">= 6"
   },
   "devDependencies": {
-    "@yoo-digital/stylelint-config-sass": "^1.0.0",
-    "sass": "^1.49.7"
+    "@yoo-digital/stylelint-config-sass": "^2.0.0",
+    "sass": "^1.57.0"
   }
 }

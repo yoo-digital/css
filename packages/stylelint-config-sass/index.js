@@ -42,6 +42,7 @@ module.exports = {
     'value-no-vendor-prefix': true,
     'color-hex-length': 'long',
     'comment-empty-line-before': null,
+    'custom-property-empty-line-before': null,
     'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': {
@@ -55,12 +56,12 @@ module.exports = {
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
     'order/order': [
       [
+        'dollar-variables',
+        'custom-properties',
         {
           type: 'at-rule',
           name: 'include',
         },
-        'custom-properties',
-        'dollar-variables',
         'declarations',
         'at-rules',
         'rules',
