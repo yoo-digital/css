@@ -33,6 +33,15 @@ You can apply your own set of rules on top of that, but do not turn off any of t
 except it is an obstacle and making your life harder. Check the chapter below, for a complete set of rules
 that can be applied.
 
+
+## Changelog
+
+### Version 1.0.0
+You will have to update to v1.0.0 in order to be compatible with stylelint v14 ([see migration guide](https://stylelint.io/migration-guide/to-14/)).
+
+- Updated to v14 of `stylelint`
+- Removed `stylelint-scss` peer-dependency in favor of `stylelint-config-standard-scss`
+
 ## Development
 Before creating a pull request or publishing changes, make sure you tested your changes.
 You can use `yarn link` to link your work in progress into an actual project and test your changes.

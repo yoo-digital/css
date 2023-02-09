@@ -28,12 +28,20 @@
       "email": "cedric.madoerin@yoo.digital"
     },
     {
+      "name": "Daniel Kohler",
+      "email": "daniel.kohler@yoo.digital"
+    },
+    {
       "name": "Elia Reutlinger",
       "email": "elia.reutlinger@yoo.digital"
     },
     {
       "name": "Emanuel Marsicovetere",
       "email": "emanuel.marsicovetere@yoo.digital"
+    },
+    {
+      "name": "Hervé Brunner",
+      "email": "herve.brunner@yoo.digital"
     },
     {
       "name": "Kelvin Louis",
@@ -48,19 +56,27 @@
       "email": "sacha.schmid@yoo.digital"
     },
     {
+      "name": "Tobias Wahl",
+      "email": "tobias.wahl@yoo.digital"
+    },
+    {
       "name": "Yanick Recher",
       "email": "yanick.recher@yoo.digital"
     }
   ],
   "engines": {
-    "node": ">= 12.4.0",
-    "npm": ">= 6.14.0"
+    "node": ">= 16",
+    "npm": ">= 6"
   },
   "scripts": {
     "changed": "lerna changed",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "bootstrap": "lerna bootstrap"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^6.1.0"
   }
 }

@@ -1,10 +1,7 @@
 module.exports = {
   extends: [
-    'stylelint-config-standard',
+    'stylelint-config-standard-scss',
     'stylelint-config-property-sort-order-smacss',
-  ],
-  plugins: [
-    'stylelint-scss',
   ],
   rules: {
     'at-rule-disallowed-list': [
@@ -45,6 +42,7 @@ module.exports = {
     'value-no-vendor-prefix': true,
     'color-hex-length': 'long',
     'comment-empty-line-before': null,
+    'custom-property-empty-line-before': null,
     'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': {
@@ -58,12 +56,12 @@ module.exports = {
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
     'order/order': [
       [
+        'dollar-variables',
+        'custom-properties',
         {
           type: 'at-rule',
           name: 'include',
         },
-        'custom-properties',
-        'dollar-variables',
         'declarations',
         'at-rules',
         'rules',
@@ -76,6 +74,18 @@ module.exports = {
       {
         unspecified: 'ignore',
         disableFix: true,
+      },
+    ],
+    'selector-class-pattern': [
+      '^[a-z][a-z0-9-_]+$',
+      {
+        message: 'Expected class selector to be kebab-case or follow BEM __ --',
+      },
+    ],
+    'selector-id-pattern': [
+      '^[a-z][a-z0-9-_]+$',
+      {
+        message: 'Expected id selector to be kebab-case or follow BEM __ --',
       },
     ],
     'selector-attribute-quotes': 'always',
@@ -116,6 +126,7 @@ module.exports = {
     ],
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-colon-space-after': 'always-single-line',
+    'scss/dollar-variable-empty-line-before': null,
     'scss/double-slash-comment-whitespace-inside': [
       'always',
       {
@@ -123,5 +134,22 @@ module.exports = {
       },
     ],
     'scss/selector-no-redundant-nesting-selector': true,
+    'value-keyword-case': [
+      'lower',
+      {
+        'camelCaseSvgKeywords': true,
+      },
+    ],
   },
+  // Allow .camelCase for modules
+  // See: https://github.com/stylelint/stylelint/issues/3259#issuecomment-656717023
+  overrides: [
+    {
+      files: ['**/*.module.scss'],
+      rules: {
+        'selector-class-pattern': '^[a-z][a-zA-Z0-9_-]+$',
+        'selector-id-pattern': '^[a-z][a-zA-Z0-9_-]+$',
+      },
+    },
+  ],
 };
