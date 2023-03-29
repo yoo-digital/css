@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/yooapps/yoo-digital-css.git"
+    "url": "git@github.com:yoo-digital/css.git"
   },
   "author": {
     "name": "YOO AG",
