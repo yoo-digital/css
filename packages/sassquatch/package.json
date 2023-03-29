@@ -79,7 +79,7 @@
   },
   "engines": {
     "node": ">= 16",
-    "npm": ">= 6"
+    "npm": ">= 8"
   },
   "devDependencies": {
     "@yoo-digital/stylelint-config-sass": "^2.0.0",

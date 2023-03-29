@@ -78,7 +78,7 @@
   },
   "engines": {
     "node": ">= 16",
-    "npm": ">= 6"
+    "npm": ">= 8"
   },
   "dependencies": {
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
