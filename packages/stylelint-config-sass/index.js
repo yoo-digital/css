@@ -140,6 +140,14 @@ module.exports = {
         'camelCaseSvgKeywords': true,
       },
     ],
+    'length-zero-no-unit': [
+      true,
+      {
+        ignore: [
+          'custom-properties',
+        ],
+      },
+    ],
   },
   // Allow .camelCase for modules
   // See: https://github.com/stylelint/stylelint/issues/3259#issuecomment-656717023
