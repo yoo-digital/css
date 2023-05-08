@@ -69,9 +69,14 @@
     "npm": ">= 8"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "changed": "lerna changed",
-    "publish": "lerna publish",
-    "bootstrap": "lerna bootstrap"
+    "publish:ci": "lerna publish from-package",
+    "publish:ci:canary": "lerna publish from-package",
+    "publish:manual": "lerna publish",
+    "version:ci": "lerna version --exact --conventional-commits",
+    "version:ci:canary": "lerna version --exact --conventional-commits --conventional-prerelease --preid canary",
+    "version:manual": "lerna version"
   },
   "workspaces": [
     "packages/*"
