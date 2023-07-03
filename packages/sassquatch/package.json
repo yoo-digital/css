@@ -82,7 +82,7 @@
     "npm": ">= 8"
   },
   "devDependencies": {
-    "@yoo-digital/stylelint-config-sass": "2.0.1-canary.0",
+    "@yoo-digital/stylelint-config-sass": "2.0.1-canary.1",
     "sass": "^1.57.0"
   }
 }
