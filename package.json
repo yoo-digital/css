@@ -32,10 +32,6 @@
       "email": "daniel.kohler@yoo.digital"
     },
     {
-      "name": "Elia Reutlinger",
-      "email": "elia.reutlinger@yoo.digital"
-    },
-    {
       "name": "Emanuel Marsicovetere",
       "email": "emanuel.marsicovetere@yoo.digital"
     },
@@ -65,15 +61,17 @@
     }
   ],
   "engines": {
-    "node": ">= 16",
+    "node": ">= 18",
     "npm": ">= 8"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changed": "lerna changed",
+    "lint": "lerna run lint",
     "publish:ci": "lerna publish from-package --yes",
     "publish:ci:canary": "lerna publish from-package --yes",
     "publish:manual": "lerna publish",
+    "repair": "lerna repair",
     "version:ci": "lerna version --exact --conventional-commits --conventional-graduate --yes",
     "version:ci:canary": "lerna version --exact --conventional-commits --conventional-prerelease --preid canary --yes",
     "version:manual": "lerna version"
@@ -82,6 +80,8 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.6.1"
-  }
+    "lerna": "^8.1.2",
+    "@yoo-digital/prettier": "^1.0.0"
+  },
+  "prettier": "@yoo-digital/prettier"
 }
