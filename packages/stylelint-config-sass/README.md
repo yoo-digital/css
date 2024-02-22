@@ -1,27 +1,19 @@
 # YOO Stylelint Configuration for Sass Projects
 [![npm version](https://badge.fury.io/js/%40yoo-digital%2Fstylelint-config-sass.svg)](https://badge.fury.io/js/%40yoo-digital%2Fstylelint-config-sass)
 
-Contains the settings and rules used for Sass projects within YOO.
+Contains the settings and rules used for Sass/SCSS projects within YOO.
 It is publicly available via the npm registry.
+
+❗ Should be used in combination with our [Prettier config](https://github.com/yoo-digital/prettier).
 
 ## Purpose
 The exported `index.js` file contains all the Stylelint rules for Sass that are compatible with our [coding guidelines](https://yooapps.jira.com/wiki/spaces/FD/pages/1239187573/Coding+Guidelines).
 See the guidelines for more information.
 
 ## Usage
-In order to use the Stylelint configuration file in your project, you will have to install
-its dependencies (including peer-dependencies). The following command should work
-for both _npm_ and _yarn_. It will detect the proper client.
+**Be aware**: The _stylelint_ package is listed as a peer dependency. The versions might collide in your project. Always try to use the latest versions of _stylelint_ in your project. Please check the changelog to see which _stylelint_ version this package is compatible with.
 
-```text
-npx install-peerdeps --dev @yoo-digital/stylelint-config-sass
-```
-
-**Be aware**: The _stylelint_ package is one of the peer-dependencies. The versions might collide in your project.
-Always try to use the latest versions of _stylelint_ in your project.
-
-After installing the packages, you can create a `.stylelintrc.js` file in the root of your project
-and add the following lines:
+After installing the packages, you can create a `.stylelintrc.js` file in the root of your project and add the following lines:
 
 ```javascript
 module.exports = {
@@ -34,16 +26,9 @@ except it is an obstacle and making your life harder. Check the chapter below, f
 that can be applied.
 
 
-## Changelog
 
-### Version 1.0.0
-You will have to update to v1.0.0 in order to be compatible with stylelint v14 ([see migration guide](https://stylelint.io/migration-guide/to-14/)).
-
-- Updated to v14 of `stylelint`
-- Removed `stylelint-scss` peer-dependency in favor of `stylelint-config-standard-scss`
 
 ## Development
 Before creating a pull request or publishing changes, make sure you tested your changes.
-You can use `yarn link` to link your work in progress into an actual project and test your changes.
-Make sure you are in the directory of the package (_./packages/stylelint-config-sass_) before linking.
-See the [official documentation](https://yarnpkg.com/lang/en/docs/cli/link/) of yarn for more information.
+
+This project is a monorepo and uses _lerna_. See Lerna's [official website](https://lerna.js.org/) for more info.

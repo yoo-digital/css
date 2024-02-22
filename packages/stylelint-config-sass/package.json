@@ -35,10 +35,6 @@
       "email": "daniel.kohler@yoo.digital"
     },
     {
-      "name": "Elia Reutlinger",
-      "email": "elia.reutlinger@yoo.digital"
-    },
-    {
       "name": "Emanuel Marsicovetere",
       "email": "emanuel.marsicovetere@yoo.digital"
     },
@@ -74,17 +70,22 @@
     "README.md"
   ],
   "scripts": {
-    "lint": "stylelint \"{src,styles,stories}/**/*.scss\""
+    "lint": "stylelint \"__test__/**/*.scss\""
   },
   "engines": {
-    "node": ">= 16",
+    "node": ">= 18",
     "npm": ">= 8"
   },
   "dependencies": {
-    "stylelint-config-property-sort-order-smacss": "^9.1.0",
-    "stylelint-config-standard-scss": "^10.0.0"
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.4"
   },
   "peerDependencies": {
-    "stylelint": "^15.9.0"
-  }
+    "stylelint": "^16.2.1"
+  },
+  "devDependencies": {
+    "@yoo-digital/prettier": "^1.0.0",
+    "stylelint": "^16.2.1"
+  },
+  "prettier": "@yoo-digital/prettier"
 }
