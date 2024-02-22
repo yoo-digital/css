@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "variables";
 
 // A mixin that allows you to set "box-sizing: border-box" as a global default.
@@ -8,6 +9,7 @@
     box-sizing: border-box;
   }
 
+  // stylelint-disable-next-line
   *,
   *::before,
   *::after {
@@ -41,7 +43,7 @@
 @mixin font-size-modifier($map: $font-size-map) {
   @each $key, $value in $map {
     &--#{$key} {
-      font-size: map-get($map, $key);
+      font-size: map.get($map, $key);
     }
   }
 }
@@ -64,9 +66,10 @@
 // The breakpoint function is a private utility function that is not intended
 // for external usage. It takes a breakpoint name, checks if it is defined,
 // and returns either the breakpoint value or a warning.
+// stylelint-disable-next-line
 @function _breakpoint($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @return map-get($breakpoints, $breakpoint);
+  @if map.has-key($breakpoints, $breakpoint) {
+    @return map.get($breakpoints, $breakpoint);
   } @else {
     @warn "No breakpoint called "#{$breakpoint}" was found. Possible values include: #{map-keys($breakpoints)}";
     @return null;
@@ -121,6 +124,7 @@
 // the site where visual display is undesirable. Information provided in this
 // manner should be kept concise, to avoid unnecessary burden on the user.
 @mixin a11y-visually-hidden {
+  // stylelint-disable-next-line
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
