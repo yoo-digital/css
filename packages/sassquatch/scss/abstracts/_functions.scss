@@ -1,3 +1,6 @@
+// stylelint-disable order/order
+@use "sass:map";
+@use "sass:string";
 @import "./variables";
 
 /// Picks the correct color code of a specific theme
@@ -7,9 +10,9 @@
 /// @return {String}
 /// @require $theme-colors
 @function theme-color($key: "primary", $variant: "base") {
-  $map: map-get($theme-colors, $key);
+  $map: map.get($theme-colors, $key);
 
-  @return map-get($map, $variant);
+  @return map.get($map, $variant);
 }
 
 /// Ensures consistent spacing by always using the same base.
@@ -27,7 +30,7 @@
 /// @return {Number}
 /// @require $colors-map
 @function color($color) {
-  @return map-get($color-map, $color);
+  @return map.get($color-map, $color);
 }
 
 /// Slightly lighten a color
@@ -52,18 +55,18 @@
 /// @param {String} $separator - string to seperate on
 /// @return {List}
 @function split($string, $separator) {
-  @if $separator == '' or $separator == null {
+  @if not $separator or $separator == '' {
     @return $string;
   }
 
-  $index: str-index($string, $separator);
+  $index: string.index($string, $separator);
 
   @if not $index {
     @return $string;
   }
 
-  $lhs: str-slice($string, 1, $index - 1);
-  $rhs: str-slice($string, $index + 1);
+  $lhs: string.slice($string, 1, $index - 1);
+  $rhs: string.slice($string, $index + 1);
 
   @return split($lhs) split($rhs);
 }
@@ -81,14 +84,14 @@
   }
 
   @if length($components) == 1 {
-    @return map-get($z-indexes, $components);
+    @return map.get($z-indexes, $components);
   } @else if length($components) == 2 {
     @if not (nth($components, 1) == 'above' or nth($components, 1) == 'below') {
       @warn "Invalid layer modifier. Possible values include: "above", "below"";
       @return null;
     }
 
-    @return map-get($z-indexes, nth($components, 2)) + if(nth($components, 1) == 'above', 1, -1);
+    @return map.get($z-indexes, nth($components, 2)) + if(nth($components, 1) == 'above', 1, -1);
   }
 
   @warn "Invalid layer definition. Use one of #{map-keys($z-indexes)}, along with the keywords above, below.";

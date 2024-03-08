@@ -1,7 +1,7 @@
 {
   "name": "@yoo-digital/stylelint-config-sass",
   "description": "Stylelint configuration file containing rules for Sass projects",
-  "version": "2.0.1",
+  "version": "3.0.1-canary.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -33,10 +33,6 @@
     {
       "name": "Daniel Kohler",
       "email": "daniel.kohler@yoo.digital"
-    },
-    {
-      "name": "Elia Reutlinger",
-      "email": "elia.reutlinger@yoo.digital"
     },
     {
       "name": "Emanuel Marsicovetere",
@@ -74,17 +70,22 @@
     "README.md"
   ],
   "scripts": {
-    "lint": "stylelint \"{src,styles,stories}/**/*.scss\""
+    "lint": "stylelint \"__test__/**/*.scss\""
   },
   "engines": {
-    "node": ">= 16",
+    "node": ">= 18",
     "npm": ">= 8"
   },
   "dependencies": {
-    "stylelint-config-property-sort-order-smacss": "^9.0.0",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.4"
   },
   "peerDependencies": {
-    "stylelint": "^14.16.0"
-  }
+    "stylelint": "^16.2.1"
+  },
+  "devDependencies": {
+    "@yoo-digital/prettier": "^1.0.0",
+    "stylelint": "^16.2.1"
+  },
+  "prettier": "@yoo-digital/prettier"
 }

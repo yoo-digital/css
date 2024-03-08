@@ -1,7 +1,9 @@
 module.exports = {
   extends: [
     'stylelint-config-standard-scss',
-    'stylelint-config-property-sort-order-smacss',
+  ],
+  plugins: [
+    'stylelint-order',
   ],
   rules: {
     'at-rule-disallowed-list': [
@@ -43,7 +45,6 @@ module.exports = {
     'color-hex-length': 'long',
     'comment-empty-line-before': null,
     'custom-property-empty-line-before': null,
-    'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': {
       '/^border/': 'none',
@@ -115,7 +116,6 @@ module.exports = {
         ],
       },
     ],
-    'string-quotes': 'double',
     'scss/double-slash-comment-inline': [
       'never',
       {
