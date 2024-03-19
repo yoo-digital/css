@@ -1,33 +1,26 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard-scss',
-  ],
-  plugins: [
-    'stylelint-order',
-  ],
+  extends: ['stylelint-config-standard-scss'],
+  plugins: ['stylelint-order'],
   rules: {
-    'at-rule-disallowed-list': [
-      'extend',
-    ],
+    'at-rule-disallowed-list': ['extend'],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules:
-          [
-            'at-root',
-            'content',
-            'each',
-            'else',
-            'error',
-            'for',
-            'function',
-            'include',
-            'if',
-            'mixin',
-            'return',
-            'use',
-            'warn',
-          ],
+        ignoreAtRules: [
+          'at-root',
+          'content',
+          'each',
+          'else',
+          'error',
+          'for',
+          'function',
+          'include',
+          'if',
+          'mixin',
+          'return',
+          'use',
+          'warn',
+        ],
       },
     ],
     'at-rule-no-vendor-prefix': true,
@@ -64,8 +57,8 @@ module.exports = {
           name: 'include',
         },
         'declarations',
-        'at-rules',
         'rules',
+        'at-rules',
         {
           type: 'at-rule',
           name: 'include',
@@ -96,9 +89,7 @@ module.exports = {
     'selector-max-type': [
       1,
       {
-        ignoreTypes: [
-          '/fieldset/',
-        ],
+        ignoreTypes: ['/fieldset/'],
       },
     ],
     'selector-max-universal': 0,
@@ -119,9 +110,7 @@ module.exports = {
     'scss/double-slash-comment-inline': [
       'never',
       {
-        ignore: [
-          'stylelint-commands',
-        ],
+        ignore: ['stylelint-commands'],
       },
     ],
     'scss/dollar-variable-colon-space-before': 'never',
@@ -137,15 +126,13 @@ module.exports = {
     'value-keyword-case': [
       'lower',
       {
-        'camelCaseSvgKeywords': true,
+        camelCaseSvgKeywords: true,
       },
     ],
     'length-zero-no-unit': [
       true,
       {
-        ignore: [
-          'custom-properties',
-        ],
+        ignore: ['custom-properties'],
       },
     ],
   },
