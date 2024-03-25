@@ -3,26 +3,6 @@ module.exports = {
   plugins: ['stylelint-order'],
   rules: {
     'at-rule-disallowed-list': ['extend'],
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'at-root',
-          'content',
-          'each',
-          'else',
-          'error',
-          'for',
-          'function',
-          'include',
-          'if',
-          'mixin',
-          'return',
-          'use',
-          'warn',
-        ],
-      },
-    ],
     'at-rule-no-vendor-prefix': true,
 
     // See:
@@ -58,11 +38,18 @@ module.exports = {
         },
         'declarations',
         'rules',
-        'at-rules',
+        {
+          type: 'at-rule',
+          name: 'container',
+        },
         {
           type: 'at-rule',
           name: 'include',
           parameter: 'up-to|at-least',
+        },
+        {
+          type: 'at-rule',
+          name: 'media',
         },
       ],
       {
