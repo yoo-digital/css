@@ -1,33 +1,8 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-property-sort-order-smacss',
-  ],
+  extends: ['stylelint-config-standard-scss'],
+  plugins: ['stylelint-order'],
   rules: {
-    'at-rule-disallowed-list': [
-      'extend',
-    ],
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules:
-          [
-            'at-root',
-            'content',
-            'each',
-            'else',
-            'error',
-            'for',
-            'function',
-            'include',
-            'if',
-            'mixin',
-            'return',
-            'use',
-            'warn',
-          ],
-      },
-    ],
+    'at-rule-disallowed-list': ['extend'],
     'at-rule-no-vendor-prefix': true,
 
     // See:
@@ -43,7 +18,6 @@ module.exports = {
     'color-hex-length': 'long',
     'comment-empty-line-before': null,
     'custom-property-empty-line-before': null,
-    'declaration-colon-space-after': 'always-single-line',
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': {
       '/^border/': 'none',
@@ -63,12 +37,19 @@ module.exports = {
           name: 'include',
         },
         'declarations',
-        'at-rules',
         'rules',
+        {
+          type: 'at-rule',
+          name: 'container',
+        },
         {
           type: 'at-rule',
           name: 'include',
           parameter: 'up-to|at-least',
+        },
+        {
+          type: 'at-rule',
+          name: 'media',
         },
       ],
       {
@@ -95,9 +76,7 @@ module.exports = {
     'selector-max-type': [
       1,
       {
-        ignoreTypes: [
-          '/fieldset/',
-        ],
+        ignoreTypes: ['/fieldset/'],
       },
     ],
     'selector-max-universal': 0,
@@ -115,13 +94,10 @@ module.exports = {
         ],
       },
     ],
-    'string-quotes': 'double',
     'scss/double-slash-comment-inline': [
       'never',
       {
-        ignore: [
-          'stylelint-commands',
-        ],
+        ignore: ['stylelint-commands'],
       },
     ],
     'scss/dollar-variable-colon-space-before': 'never',
@@ -137,15 +113,13 @@ module.exports = {
     'value-keyword-case': [
       'lower',
       {
-        'camelCaseSvgKeywords': true,
+        camelCaseSvgKeywords: true,
       },
     ],
     'length-zero-no-unit': [
       true,
       {
-        ignore: [
-          'custom-properties',
-        ],
+        ignore: ['custom-properties'],
       },
     ],
   },
